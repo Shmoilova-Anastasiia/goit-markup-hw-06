@@ -531,6 +531,58 @@ color:#2196F3;
     .icon-join{
         fill:currentColor;
     }
+    .container-subscribe{
+    margin-left: 93px;
+    }
+    .text-subscribe{ 
+        width: 207px; 
+        margin-bottom: 20px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    .form-subscribe {
+        display: flex;
+        gap: 12px;
+    }
+    .field-subscribe{
+        width: 358px;
+        height: 50px;
+        padding: 15px 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .button-subscribe{
+        border-radius: 4px;
+        padding: 10px 32px;
+        min-width: 216px;
+        border: transparent;
+
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+
+        color:var(--text-color-light);
+        background:var(--accent-color);
+        transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+    }
+    .button-subscribe:hover,
+    .button-subscribe:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
 
     /*---------MODAL WINDOW------------*/
     .backdrop{
