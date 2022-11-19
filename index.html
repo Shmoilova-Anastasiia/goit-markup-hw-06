@@ -302,9 +302,10 @@
             name="user-mail" 
             placeholder="E-mail"
             required>
-       <!-- <span class="label-subscribe" lang="en">E-mail</span>  -->
     </label>
-<button class="button button-subscribe" type="submit"> Підписатися</button>
+<button class="button button-subscribe" type="submit"> Підписатися
+    <svg class="icon-subscribe" width="24" height="24" aria-label="іконка subscribe"> <use href="./icons.svg#icon-icon-send"></use></svg>
+</button>
     </form>
 </div>
 </div>
@@ -337,9 +338,10 @@
                 <label class="modal-form-label" for="user-message">Коментар</label>
                     <textarea class="modal-form-message" name="user-message" id="user-message" rows="7" placeholder="Введіть текст"></textarea>
             </div>
-            <div role="group">
+            <div class="modal-form-agreement" role="group">
                 <input class="modal-form-checkbox" type="checkbox" id="user-agreement">
-                <label for="user-agreement">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
+                <svg class="icon-checkbox" width="11" height="8" aria-label="іконка check"> <use href="./icons.svg#icon-check"></use></svg>
+                <label class="agreement-label" for="user-agreement">Погоджуюся з розсилкою та приймаю <a class="link link-agreement" href="">Умови договору</a></label>
             </div>
             <button class="button modal-form-button" type="submit">Відправити</button>
         </form>

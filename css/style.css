@@ -105,13 +105,13 @@
         padding-top: 32px;
         padding-bottom: 32px;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: inherit;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: inherit;
 
-    transition: color 250ms cubic-bezier(0.4,0,0.2,1);
+        transition: color 250ms cubic-bezier(0.4,0,0.2,1);
     }
      .current{
         position: relative;
@@ -452,8 +452,10 @@ color:#2196F3;
     padding-bottom: 60px;
     }
     .footer-container{
+        position: relative;
         display: flex;
         align-items: baseline;
+       
     }
     /* .adress-container{
         width: 271px;
@@ -532,7 +534,8 @@ color:#2196F3;
         fill:currentColor;
     }
     .container-subscribe{
-    margin-left: 93px;
+        position: absolute;
+        right: 15px;
     }
     .text-subscribe{ 
         width: 207px; 
@@ -554,12 +557,14 @@ color:#2196F3;
         height: 50px;
         padding: 15px 16px;
 
+        outline: 1px solid transparent;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 
     .button-subscribe{
+        gap: 10px;
         border-radius: 4px;
         padding: 10px 32px;
         min-width: 216px;
@@ -580,7 +585,10 @@ color:#2196F3;
     }
     .button-subscribe:hover,
     .button-subscribe:focus{
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    .icon-subscribe{
+        fill: currentColor;
     }
 
 
@@ -601,7 +609,7 @@ color:#2196F3;
         position: absolute;
         top: 50%;
         left: 50%;
-        padding: 40px;
+        /* padding: 40px; */
         transform: translate(-50%,-50%);
         width: 528px;
         min-height: 581px;
@@ -633,12 +641,11 @@ color:#2196F3;
         opacity: 0;
         transform: translate(-50%,70%); 
     }
-    .modal-form-group{
-        margin-bottom: 12px;
-    }
+    
     .modal-label{
         display: block;
         width: 448px;
+        margin: 40px 40px 12px 40px;
 
         font-weight: 700;
         font-size: 20px;
@@ -646,6 +653,11 @@ color:#2196F3;
         text-align: center;
         letter-spacing: 0.03em;
         color: #212121;
+    }
+    .modal-form-group{
+       margin-left: 40px;
+       margin-right: 40px;
+       margin-bottom: 20px;
     }
     .modal-form-label {
         display: block;
@@ -710,7 +722,89 @@ color:#2196F3;
     .modal-form-message:focus::placeholder{
         opacity: 0;
     }
+    .modal-form-agreement{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-left: 54px;
+        margin-bottom: 30px;
+        width: 423px;
+        padding: 0;
+    }
+    .agreement-label{
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color:var(--text-color-paragraf);
+    }
+    .link-agreement{
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+        color: #2196F3;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .modal-form-checkbox{
+        display: block;
+        position: absolute;
+        appearance: none;
+        width: 16px;
+        height: 15px;
+        left: 0;
 
+        outline:  1px solid transparent;
+        outline-offset: -2px;
+        border: 1px solid #000000;
+        border-radius: 2px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: outline-color 250ms cubic-bezier(0.4,0,0.2,1), background-color 250ms cubic-bezier(0.4,0,0.2,1);;
+    }
+    .modal-form-checkbox:checked{
+        background-color: var(--accent-color);
+        outline-color: var(--accent-color);
+        /* background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E"); */
+    }
+    .icon-checkbox{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        transform: translateY(-50%);
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 250ms cubic-bezier(0.4,0,0.2,1);
+    }
+    .modal-form-checkbox:checked + .icon-checkbox{
+        opacity: 1;   
+    }
+    .modal-form-button{
+        display: flex;
+        align-items: center;
+       justify-content: center;
+       margin-left: 164px;
+
+        border-radius: 4px;
+        padding: 10px 52px;
+        min-width: 200px;
+        border: transparent;
+
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        text-align: center;
+        letter-spacing: 0.06em;
+
+        color:var(--text-color-light);
+        background:var(--accent-color);
+        transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+    }
+    .button-subscribe:hover,
+    .button-subscribe:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
     /*---------PORTFOLIO------------*/
    
     .list-filter-btn{
